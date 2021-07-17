@@ -1,0 +1,58 @@
+https://www.reddit.com/r/vim/comments/cp7n72/organizing_vim_configuration_into_multiple_files/
+
+=====================================================================================
+Im on mobile so forgive the brief explanation.
+
+Here is my vim config: https://github.com/scrapbird/dotfiles/tree/master/config/nvim
+
+It contains a few files/directories:
+
+    autoload: loads vim plug
+
+    plugins.d: files containing vim plug plugin install commands and their accompanying config
+
+    autocmd.vim: all my autocmds for changing file type settings etc
+
+    funcs.vim: any functions that I need for various shit
+
+    general.vim: general editor settings like tabstops etc
+
+    init.vim: sources all the other files
+
+    keys.vim: keybindings
+
+    plugins.vim: starts the vim plug context then sources everything in plugins.d and also installs any plugins that only require one liners
+
+    theme.vim: any theme overrides and colour changes etc
+
+I think just start chopping up your vimrc and see where you end up, it took me a few iterations before I found something that works this nicely for me. Yours will likely end up being pretty different, pick the best ideas from all the other suggestions and just start trying shit.
+3
+
+=====================================================================================
+
+Estoy en el móvil, así que perdona la breve explicación.
+
+Aquí está mi configuración de vim: https://github.com/scrapbird/dotfiles/tree/master/config/nvim
+
+Contiene algunos archivos / directorios:
+
+    autoload: carga el enchufe vim
+
+    plugins.d: archivos que contienen los comandos de instalación del complemento de vim plug y su configuración adjunta
+
+    autocmd.vim: todos mis autocmds para cambiar la configuración del tipo de archivo, etc.
+
+    funcs.vim: cualquier función que necesite para varias cosas
+
+    general.vim: configuración general del editor como tabstops, etc.
+
+    init.vim: obtiene todos los demás archivos
+
+    keys.vim: combinaciones de teclas
+
+    plugins.vim: inicia el contexto del complemento vim, luego obtiene todo en plugins.d y también instala cualquier complemento que solo requiera una línea
+
+    theme.vim: cualquier tema anula y cambia de color, etc.
+
+Creo que simplemente comience a cortar su vimrc y vea dónde termina, me tomó algunas iteraciones antes de encontrar algo que funcione tan bien para mí. Es probable que la tuya termine siendo bastante diferente, elige las mejores ideas de todas las otras sugerencias y comienza a probar mierda.
+3
