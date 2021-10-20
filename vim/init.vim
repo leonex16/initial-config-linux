@@ -67,7 +67,7 @@ syntax on
 
 " TODO: Pick a leader key
 " Leader
-let mapleader='.'
+let mapleader='-'
 
 " Guardar
 nmap <C-s> :w<CR>
@@ -80,10 +80,10 @@ nmap <Leader>q :q<CR>
 nmap <Leader>x :x<CR>
 
 " Salir del modo insertar 
-imap ii <ESC>
+imap -- <ESC>
 
 " Salir del modo visual y entrar a modo insertar
-vmap ii <ESC>i
+vmap -- <ESC>i
 
 " NerdTree
 nmap <Leader>nt :NERDTreeFind<CR>
@@ -111,7 +111,7 @@ set encoding=utf-8
 set wrap " Envuelve el texto en lugar de forzar un desplazamiento horizontal. 
 set linebreak " Envuelve el texto al final de una palabra. Esto es lo que evita que una palabra se divida en dos.
 set nolist " Debe desactivar list que muestra los caracteres de espacio en blanco como texto.
-set textwidth=85
+set textwidth=120
 set colorcolumn=+1
 set tabstop=2
 
