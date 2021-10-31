@@ -97,6 +97,8 @@ nmap <Leader>c 0i//<ESC>
 " Número de linea
 set number
 set relativenumber
+set ruler	# Show row and column ruler information
+set undolevels=1000	# Number of undo levels
 
 " Combitar portapapeles
 set clipboard=unnamed
@@ -111,9 +113,17 @@ set encoding=utf-8
 set wrap " Envuelve el texto en lugar de forzar un desplazamiento horizontal. 
 set linebreak " Envuelve el texto al final de una palabra. Esto es lo que evita que una palabra se divida en dos.
 set nolist " Debe desactivar list que muestra los caracteres de espacio en blanco como texto.
+set showbreak=+++	# Wrap-broken line prefix
 set textwidth=120
 set colorcolumn=+1
 set tabstop=2
+set visualbell	# Use visual bell (no beeping)
+set autoindent	# Auto-indent new lines
+set expandtab	# Use spaces instead of tabs
+set shiftwidth=2	# Number of auto-indent spaces
+set smartindent	# Enable smart-indent
+set smarttab	# Enable smart-tabs
+set softtabstop=4	# Number of spaces per Tab
 
 " Searching
 set hlsearch
