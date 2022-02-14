@@ -1,25 +1,34 @@
 #!/bin/bash
-sudo pacman -S base-devel neofetch git zip unzip unrar neovim nodejs npm -y &&
-git clone https://aur.archlinux.org/yay.git &&
-cd yay/ &&
-makepkg -sic -y &&
-cd .. &&
-rm -rf yay/ &&
+
+# Main Packages
+sudo pacman -Syyu -y &&
+sudo pacman -S base-devel neofetch git zip unzip unrar neovim alacritty -y &&
+
+# Yay Setup
+git clone https://aur.archlinux.org/yay.git && cd yay/ && makepkg -sic -y && cd .. && rm -rf yay/ &&
+
 yay -Syuua -y &&
-yay -S firefox-developer-edition google-chrome snapd font-victor-mono plank -y && 
+
+# Browsers
+yay -S firefox-developer-edition google-chrome microsoft-edge-stable-bin -y &&
+
+# Snap Setup
+yay -S snapd -y &&
 sudo systemctl enable --now snapd.socket &&
 sudo ln -s /var/lib/snapd/snap /snap &&
+
+# Snap Packages
 sudo snap install code --classic &&
 
-echo 'NEOVIM' &&
-mkdir ~/.config/nvim &&
-mkdir ~/.local/share/nvim/plugged &&
-cp ../vim/init.vim ~/.config/nvim/ &&
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' &&
+# Qtile Setup
+lspci -v | grep -A1 -e VGA -e 3D
+sudo pacman -S xf86-video-intel xorg-server xorg-xinit xorg-apps picom feh dmenu qtile
+echo "qtile start" > ~/.xinitrc
 
-echo 'ZSH' &&
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
-chsh -s /bin/zsh
+# LightDM Setup
+sudo pacmas -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo systemctl enable lightdm.service
+
+
 
 
