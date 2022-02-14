@@ -54,10 +54,10 @@ nmap <Leader>q :q<CR>
 nmap <Leader>x :x<CR>
 
 " Salir del modo insertar
-imap ii <ESC>
+imap ññ <ESC>
 
 " Salir del modo visual y entrar a modo insertar
-vmap ii <ESC>i
+vmap ññ <ESC>i
 
 " NerdTree
 nmap <Leader>nt :NERDTreeFind<CR>
