@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias battery="echo $(cat /sys/class/power_supply/BAT0/capacity)% - $(cat /sys/class/power_supply/BAT0/status)"
 alias zshload="source ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
 # Pure Theme
 autoload -U promptinit; promptinit
