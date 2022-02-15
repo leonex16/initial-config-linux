@@ -13,7 +13,12 @@ function log() {
 log 'Main Packages' &&
 sleep 3s &&
 sudo pacman -Syyu -y &&
-sudo pacman -S base-devel neofetch git zip unzip unrar neovim alacritty xclip -y &&
+sudo pacman -S base-devel neofetch git zip unzip unrar alacritty xclip ttf-cascadia-code -y &&
+
+# Neovim Setup
+log 'Main Packages' &&
+sudo pacman -S neovim &&
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Yay Setup
 log 'Yay Setup' &&
@@ -37,7 +42,8 @@ sudo ln -s /var/lib/snapd/snap /snap &&
 # Snap Packages
 log 'Snap Packages' &&
 sleep 3s &&
-sudo snap install code --classic postman &&
+sudo snap install code --classic &&
+sudo snap install postman &&
 
 # Qtile Setup
 log 'Qtile Setup' &&
@@ -57,7 +63,8 @@ log 'Oh My Zsh Step' &&
 sleep 3s &&
 sudo pacman -S zsh nodejs npm -y &&
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
-sudo chsh -s /bin/zsh &&
 sudo npm install --global pure-prompt &&
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting &&
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions &&
+mv -f ./.zshrc ~ &&
+sudo chsh -s /bin/zsh &&

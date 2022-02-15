@@ -108,8 +108,5 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
-# Sintax Highlighting
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Autocomplete
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
