@@ -72,8 +72,8 @@ nmap <Leader>c 0i//<ESC>
 set number
 set relativenumber
 
-" Combitar portapapeles
-set clipboard=unnamed
+" Combinar portapapeles
+set clipboard+=unnamedplus
 
 " Habilitar el mouse
 set mouse=a
