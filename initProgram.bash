@@ -49,7 +49,7 @@ sudo snap install postman &&
 log 'Qtile Setup' &&
 sleep 3s &&
 lspci -v | grep -A1 -e VGA -e 3D &&
-sudo pacman -S xf86-video-intel xorg-server xorg-xinit xorg-apps picom feh dmenu qtile &&
+sudo pacman -S xf86-video-intel xorg-server xorg-xinit xorg-apps picom dmenu qtile &&
 echo "qtile start" > ~/.xinitrc &&
 
 # LightDM Setup
