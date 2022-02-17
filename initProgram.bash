@@ -58,10 +58,18 @@ sleep 3s &&
 sudo pacmas -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings &&
 sudo systemctl enable lightdm.service &&
 
+# NVM Setup
+log 'NVM Setup' &&
+yay -S nvm &&
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc &&
+cp zsh/.zshrc ~/ &&
+source ~/.zshrc &&
+nvm install v16.14.0 &&
+
 # Oh My Zsh Step
 log 'Oh My Zsh Step' &&
 sleep 3s &&
-sudo pacman -S zsh nodejs npm -y &&
+sudo pacman -S zsh -y &&
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
 sudo npm install --global pure-prompt &&
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting &&

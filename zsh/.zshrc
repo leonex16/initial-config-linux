@@ -112,3 +112,6 @@ prompt pure
 
 # Autocomplete
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
