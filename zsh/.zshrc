@@ -99,12 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
 alias battery="echo $(cat /sys/class/power_supply/BAT0/capacity)% - $(cat /sys/class/power_supply/BAT0/status)"
 alias zshload="source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
+alias qtileconfig="nvim ~/.config/qtile/config.py"
+alias upd="sudo pacman -Syyu -y && yay -Syyua"
 
 # Pure Theme
 autoload -U promptinit; promptinit
