@@ -106,6 +106,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias qtileconfig="nvim ~/.config/qtile/config.py"
 alias upd="sudo pacman -Syyu -y && yay -Syyua"
+alias keysnames="input-remapper-control --symbol-names"
 
 # Pure Theme
 autoload -U promptinit; promptinit
