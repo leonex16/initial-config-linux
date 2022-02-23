@@ -13,7 +13,6 @@ def Widgets():
       # widget.Wlan(),
       # widget.KeyboardLayout(**WIDGETS_CONFIG['KEYBOARD']),
       widget.Spacer(),
-      widget.Sep(**WIDGETS_CONFIG['SEP']),
       widget.WindowName(),
       widget.Sep(**WIDGETS_CONFIG['SEP']),
       widget.PulseVolume(),

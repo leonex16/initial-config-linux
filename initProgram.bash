@@ -32,6 +32,11 @@ log 'Browsers' &&
 sleep 3s &&
 yay -S firefox-developer-edition google-chrome microsoft-edge-stable-bin -y &&
 
+# Input Mapper Setup
+log 'Input Mapper' &&
+sleep 3s &&
+yay -S input-remapper-git -y &&
+
 # Snap Setup
 log 'Snap Setup' &&
 sleep 3s &&
