@@ -12,8 +12,8 @@ def Widgets():
     return [
       # widget.Wlan(),
       # widget.KeyboardLayout(**WIDGETS_CONFIG['KEYBOARD']),
-      widget.Spacer(),
       widget.WindowName(),
+      widget.Spacer(),
       widget.Sep(**WIDGETS_CONFIG['SEP']),
       widget.PulseVolume(),
       widget.Sep(**WIDGETS_CONFIG['SEP']),

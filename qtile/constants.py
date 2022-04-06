@@ -13,7 +13,9 @@ MOD = "mod4"
 WALLPAPER = "~/.config/qtile/wallpaper.jpg"
 
 AUTOSTART = [
-  "xrandr --output eDP1 --mode 1920x1080 --output HDMI1 --mode 1920x1080 --right-of eDP1 &",
+  # xrandr --output eDP1 --mode 1920x1080 --output DP1 --mode 1920x1080 --right-of eDP1 --output HDMI1 --mode 1280x800 --left-of eDP1
+  "xrandr --output eDP1 --mode 1920x1080 --output DP1 --mode 1920x1080 --right-of eDP1 &",
+  "input-remapper-control --command autoload &",
   "picom &",
   "setxkbmap -layout latam -variant dvorak &",
 ]

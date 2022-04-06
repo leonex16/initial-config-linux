@@ -23,6 +23,8 @@ def Keys():
     Key([MOD, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
     Key([MOD, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([MOD, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([MOD, "shift"], 'a', lazy.prev_screen(), desc='Next monitor'),
+    Key([MOD, "shift"], 'e', lazy.next_screen(), desc='Next monitor'),
   ]
 
   # Grow windows. If current window is on the edge of screen and direction
@@ -60,8 +62,8 @@ def Keys():
 
   volume_keys = [
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 5a- unmute")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 5a+ unmute"))
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 5- unmute")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 5+ unmute"))
   ]
 
   return [
