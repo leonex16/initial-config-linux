@@ -8,14 +8,14 @@
 	"matchingLines": true,
 	"activeLine": true,
 	"lineWrap": false,
-	"vimkeys": true,
+	"vimkeys": false,
 	"userId": "d5eea89c-cd7a-4b52-806a-f2b9ded975fc",
 	"fontSize": "18",
-	"font": "DejaVu Sans Mono",
+	"font": "Cascadia Code",
 	"formatOnRun": false,
 	"closeBrackets": true,
 	"width": 960,
-	"height": 1018,
+	"height": 1013,
 	"envVars": [],
 	"analytics": true,
 	"prettierConfig": {
@@ -62,8 +62,8 @@
 	"verticalLayout": true,
 	"theme": "tomorrow-night-bright",
 	"hasUpdated": false,
-	"currentVersion": "2.3.0",
+	"currentVersion": "2.3.1",
 	"firstOpen": false,
-	"x": 960,
-	"y": 62
+	"x": 964,
+	"y": 63
 }
