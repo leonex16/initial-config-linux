@@ -98,4 +98,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh-plugins/
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.zsh-plugins/autocomplete &&
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/syntax-highlighting
 sudo chsh -s /bin/zsh &&
-chsh -s /bin/zsh
+chsh -s /bin/zsh &&
+
+# Move Windows Script Setup
+log 'Mave Windows Script Setup' &&
+sleep 5s &&
+cp movescreen/movescreen.py /usr/local/bin &&
+sudo chmod a+rx /usr/local/bin/movescreen.py &&
+sudo pacman -S xorg-xwininfo &&
