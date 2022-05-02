@@ -45,6 +45,16 @@ log 'Input Mapper' &&
 sleep 5s &&
 yay -S ulauncher -y &&
 
+# Run js Setup
+log 'Runjs' &&
+sleep 5s &&
+yay -S runjs-bin &&
+
+# Postman Setup
+log 'Postman' &&
+sleep 5s &&
+yay -S postman-bin &&
+
 # Snap Setup
 log 'Snap Setup' &&
 sleep 5s &&
@@ -56,8 +66,7 @@ sudo ln -s /var/lib/snapd/snap /snap &&
 log 'Snap Packages' &&
 sleep 5s &&
 sudo snap install code --classic &&
-sudo snap install runjs --edge &&
-sudo snap install postman onlyoffice-desktopeditors flameshot &&
+sudo snap install onlyoffice-desktopeditors flameshot &&
 
 # Qtile Setup
 log 'Qtile Setup' &&
