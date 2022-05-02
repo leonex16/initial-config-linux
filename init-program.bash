@@ -56,6 +56,7 @@ sudo ln -s /var/lib/snapd/snap /snap &&
 log 'Snap Packages' &&
 sleep 5s &&
 sudo snap install code --classic &&
+sudo snap install runjs --edge &&
 sudo snap install postman onlyoffice-desktopeditors flameshot &&
 
 # Qtile Setup
