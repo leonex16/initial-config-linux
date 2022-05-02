@@ -23,19 +23,27 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 # Yay Setup
 log 'Yay Setup' &&
 sleep 5s &&
-git clone https://aur.archlinux.org/yay.git && cd yay/ && makepkg -sic -y && cd .. && rm -rf yay/ &&
-
+git clone https://aur.archlinux.org/yay.git && 
+cd yay/ && 
+makepkg -sic -y &&
+cd .. &&
+rm -rf yay/ &&
 yay -Syuua -y &&
 
 # Browsers
 log 'Browsers' &&
 sleep 5s &&
-yay -S firefox-developer-edition google-chrome microsoft-edge-stable-bin -y &&
+yay -S firefox-developer-edition google-chrome google-chrome-dev -y &&
 
 # Input Mapper Setup
 log 'Input Mapper' &&
 sleep 5s &&
 yay -S input-remapper-git -y &&
+
+# Ulauncher Setup
+log 'Input Mapper' &&
+sleep 5s &&
+yay -S ulauncher -y &&
 
 # Snap Setup
 log 'Snap Setup' &&
@@ -47,7 +55,8 @@ sudo ln -s /var/lib/snapd/snap /snap &&
 # Snap Packages
 log 'Snap Packages' &&
 sleep 5s &&
-sudo snap install code --classic postman &&
+sudo snap install code --classic &&
+sudo snap install postman  onlyoffice-desktopeditors &&
 
 # Qtile Setup
 log 'Qtile Setup' &&
