@@ -87,15 +87,14 @@ yay -S nvm &&
 echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc &&
 cp zsh/.zshrc ~/ &&
 source ~/.zshrc &&
-nvm install v16.14.2 &&
+nvm install 18 &&
 
-# Oh My Zsh Step
-log 'Oh My Zsh Step' &&
+# ZSH Setup
+log 'ZSH' &&
 sleep 5s &&
-sudo pacman -S zsh -y &&
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
-sudo npm install --global pure-prompt &&
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting &&
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions &&
-mv -f ./.zshrc ~ &&
+yay -S zsh -y &&
+mkdir ~/.zsh-plugins &&
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh-plugins/powerlevel10k &&
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.zsh-plugins/autocomplete &&
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/syntax-highlighting
 sudo chsh -s /bin/zsh &&
