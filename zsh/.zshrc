@@ -19,8 +19,9 @@ alias zshload="source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias qtileconfig="nvim ~/.config/qtile/config.py"
-alias upd="sudo pacman -Syyu -y && yay -Syyua"
+alias upd="sudo pacman -Syyu -y && yay -Syyua && sudo snap refresh"
 alias keysnames="input-remapper-control --symbol-names"
+alias glp="git log --graph --pretty=format:\"%C(yellow)%h%Creset - %C(blue)%d%Creset - %C(blue)%ar%Creset - %C(white)%s%Creset - <%C(bold blue)%an> %n\" --abbrev-commit --branches"
 alias ll="ls -l"
 
 ### NVM
