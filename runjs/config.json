@@ -11,18 +11,18 @@
 	"vimkeys": false,
 	"userId": "d5eea89c-cd7a-4b52-806a-f2b9ded975fc",
 	"fontSize": "18",
-	"font": "Cascadia Code",
+	"font": "DejaVu Sans Mono",
 	"formatOnRun": false,
 	"closeBrackets": true,
 	"width": 960,
-	"height": 1013,
+	"height": 1048,
 	"envVars": [],
 	"analytics": true,
 	"prettierConfig": {
 		"singleQuote": true
 	},
 	"babelPlugins": {
-		"decoratorsPlugin": false,
+		"decoratorsPlugin": true,
 		"functionSentPlugin": false,
 		"doExpressionsPlugin": false,
 		"asyncDoExpressionsPlugin": false,
@@ -37,7 +37,7 @@
 		"envPreset": true
 	},
 	"statementResults": true,
-	"autoScroll": false,
+	"autoScroll": true,
 	"updateAvailable": false,
 	"tabs": {
 		"c28444fd-1914-44a8-99de-462b0d6fd0d0": {
@@ -45,9 +45,14 @@
 			"title": "",
 			"arrangement": {
 				"direction": "row",
-				"first": "editor",
-				"second": "output",
-				"splitPercentage": 67.60416666666667
+				"first": "files",
+				"second": {
+					"direction": "row",
+					"first": "editor",
+					"second": "output",
+					"splitPercentage": 59.42708333333333
+				},
+				"splitPercentage": 0
 			}
 		},
 		"order": [
@@ -62,8 +67,13 @@
 	"verticalLayout": true,
 	"theme": "tomorrow-night-bright",
 	"hasUpdated": false,
-	"currentVersion": "2.3.1",
+	"currentVersion": "2.4.1",
 	"firstOpen": false,
-	"x": 964,
-	"y": 63
+	"x": 0,
+	"y": 32,
+	"signatures": false,
+	"hoverInfo": false,
+	"scrolling": "auto",
+	"confirmClose": false,
+	"systemNode": false
 }
