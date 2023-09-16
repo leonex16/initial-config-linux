@@ -1,0 +1,35 @@
+eval "$(starship init zsh)"
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+# pnpm
+export PNPM_HOME="/home/leo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# plugins
+# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zshautosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
+source ~/.config/zsh/zshautosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+# alias
+alias zshload="source ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias nvimconfig="nvim ~/.config/nvim/init.vim"
+alias i3config="nvim ~/.config/i3/config"
+alias upd="sudo pacman -Syyu && yay -Syyua"
+alias glp="git log --graph --pretty=format:\"%C(yellow)%h%Creset - %C(blue)%d%Creset - %C(blue)%ar%Creset - %C(white)%s%Creset - <%C(bold blue)%an> %n\" --abbrev-commit --branches"
+alias ll="ls -l"
+alias lla="ls -la"
+alias gituserconfig="git config user.name \"Leonel Espinoza Sotelo\" && git config user.email \"leonelantonio569@gmail.com\""
+alias ggpush="git push -u origin HEAD"
+alias ggpull="git pull -u origin HEAD"
+alias off="shutdown -h now"
+alias pn="pnpm"
+
